@@ -51,19 +51,9 @@ module bram #(
    // read operation 
    always @ (posedge clk)
    begin
-      if (rst)
-      begin
-      end 
-      else 
-      begin
         if (rd_en)
         begin
           rd_data <= mem [rd_add];
         end
-        else
-        begin
-          // do nothing
-        end 
-      end 
-   end 
-endmodule
+   end
+  endmodule
