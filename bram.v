@@ -20,11 +20,11 @@ module bram #(
    input clk;
    input rst;
    input we;
-   input wr_add;
-   input wr_data;
+   input [2:0] wr_add;
+   input [31:0] wr_data;
    input rd_en;
-   input rd_add;
-   output reg rd_data;
+   input [2:0] rd_add;
+   output reg [31:0] rd_data;
    
    // MEMORY 
    reg [WIDTH-1:0] mem [LENGHT-1:0];
